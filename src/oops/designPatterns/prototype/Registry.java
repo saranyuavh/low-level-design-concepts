@@ -13,7 +13,7 @@ public class Registry {
 	private Registry registry = null;
 	private Map<String, Item> items = new HashMap<String, Item>();
 	
-	public  getInstance() {
+	public static getInstance() {
 		if(registry == null) {
 			registry == new Registry();
 		}

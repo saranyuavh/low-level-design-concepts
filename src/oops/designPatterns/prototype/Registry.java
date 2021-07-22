@@ -10,9 +10,16 @@ import oops.designPatterns.prototype.items.Movie;
 
 //Singleton
 public class Registry {
-
+	private Registry registry = null;
 	private Map<String, Item> items = new HashMap<String, Item>();
 	
+	public  getInstance() {
+		if(registry == null) {
+			registry == new Registry();
+		}
+		return registry;
+	}
+
 	public Registry() {
 		loadItems();
 	}
